@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&family=Indie+Flower&family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    color: #f9f1f7;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(./images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.app {
+    margin: 0 auto;
+    width: 92%;
+    padding: 2rem;
+}
+
+.app .search input {
+    border: none;
+    outline: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #212129;
+    background: #f9f9f9;
+    margin: 0 0 3rem;
+}
+
+.app .search input::placeholder {
+    color: rgb(177, 177, 177);
+}
+
+.app .container {
+    text-align: center;
+}
+
+.app .container .top {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.app .container .top .location>p:nth-child(1) {
+    font-size: 2.5rem;
+}
+
+.app .container .top .location>p:nth-child(2) {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.app .container .top .temp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.app .container .top .temp h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: 'Pacifico', cursive;
+}
+
+.app .container .top .desc>p {
+    font-size: 2rem;
+    font-family: 'Indie Flower', cursive;
+    text-transform: uppercase;
+}
+
+.app .container .bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.app .container .bottom .feels,
+.app .container .bottom .humidity,
+.app .container .bottom .wind {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    position: relative;
+}
+
+.feels>p:nth-child(2)::after,
+.humidity>p:nth-child(2)::after,
+.wind>p:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    border-bottom: 1px solid #f9f1f7;
+}
